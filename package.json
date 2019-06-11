@@ -1,0 +1,14 @@
+{
+  "name": "product_list_node_express_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gonghaima/productList-express-server.git",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Steven <gonghaima@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
