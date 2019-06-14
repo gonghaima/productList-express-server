@@ -10,3 +10,4 @@ TODO:
 - [x] babel 7
 - [x] ES6 import syntax support
 - [x] Docker support
+- [x] Initial structure setup
