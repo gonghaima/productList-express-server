@@ -1,12 +1,12 @@
 import HTTPStatus from "http-status";
 import productAPIRequest from "../mock/productsData";
-export const validation = {};
+import productModel from "../models/product.model";
 
 const getAll = async (req, res, next) => {
   try {
     console.log("before calling productAPIRequest");
 
-    const products = await productAPIRequest();
+    const products = await productModel.findAll();
 
     return res.status(HTTPStatus.FOUND).json(products);
   } catch (e) {
