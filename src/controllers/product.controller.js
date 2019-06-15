@@ -2,7 +2,7 @@ import HTTPStatus from "http-status";
 import productAPIRequest from "../mock/productsData";
 export const validation = {};
 
-export default async (req, res, next) => {
+const getAll = async (req, res, next) => {
   try {
     console.log("before calling productAPIRequest");
 
@@ -14,3 +14,5 @@ export default async (req, res, next) => {
     return next(e);
   }
 };
+
+export default { getAll };
