@@ -5,12 +5,14 @@
   "repository": "git@github.com:gonghaima/productList-express-server.git",
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js",
+    "debug": "nodemon --exec babel-node src/index.js --inspect=0.0.0.0:3500",
     "build": "babel src --out-dir dist",
     "serve": "node dist/index.js"
   },
   "author": "Steven <gonghaima@hotmail.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.19.0",
     "express": "^4.17.1",
     "http-status": "^1.3.2",
     "nodemon": "^1.19.1"
