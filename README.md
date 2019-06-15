@@ -12,4 +12,4 @@ TODO:
 - [x] Docker support
 - [x] Initial structure setup
 - [x] Using mocks
-- [ ] Using real api request, and relace mocks
+- [x] Using real api request, and relace mocks
