@@ -11,3 +11,4 @@ TODO:
 - [x] ES6 import syntax support
 - [x] Docker support
 - [x] Initial structure setup
+- [x] Using mocks
