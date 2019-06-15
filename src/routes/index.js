@@ -1,12 +1,12 @@
 import { Router } from "express";
 import HTTPStatus from "http-status";
 import APIError from "../services/error";
-import UserRoutes from "./user.routes";
+import ProductsRoutes from "./product.routes";
 
 const routes = new Router();
 
-routes.get("/", UserRoutes);
-routes.use("/users", UserRoutes);
+routes.get("/", ProductsRoutes);
+routes.use("/products", ProductsRoutes);
 
 routes.all("*", (req, res, next) =>
   next(new APIError("Not Found!", HTTPStatus.NOT_FOUND, true))

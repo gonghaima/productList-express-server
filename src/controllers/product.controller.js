@@ -6,9 +6,9 @@ export default async (req, res, next) => {
   try {
     console.log("before calling productAPIRequest");
 
-    const users = await productAPIRequest();
+    const products = await productAPIRequest();
 
-    return res.status(HTTPStatus.FOUND).json(users);
+    return res.status(HTTPStatus.FOUND).json(products);
   } catch (e) {
     e.status = HTTPStatus.BAD_REQUEST;
     return next(e);
