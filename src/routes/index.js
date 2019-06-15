@@ -5,7 +5,6 @@ import ProductsRoutes from "./product.routes";
 
 const routes = new Router();
 
-routes.get("/", ProductsRoutes);
 routes.use("/products", ProductsRoutes);
 
 routes.all("*", (req, res, next) =>
