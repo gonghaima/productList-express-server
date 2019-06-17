@@ -13,5 +13,6 @@ TODO:
 - [x] Initial structure setup
 - [x] Using mocks
 - [x] Using real api request, and relace mocks
+- [x] Production build fix
 - [ ] Cache in Redis
 - [ ] Pagination from there
