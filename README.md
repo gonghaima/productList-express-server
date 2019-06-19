@@ -14,5 +14,7 @@ TODO:
 - [x] Using mocks
 - [x] Using real api request, and relace mocks
 - [x] Production build fix & docker fix
+- [x] Redis docker works
+- [ ] Redis local works
 - [ ] Cache in Redis
 - [ ] Pagination from there
