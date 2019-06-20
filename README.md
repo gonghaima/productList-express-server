@@ -14,7 +14,7 @@ TODO:
 - [x] Using mocks
 - [x] Using real api request, and relace mocks
 - [x] Production build fix & docker fix
-- [ ] Show version number
+- [x] Show version number
 - [x] Redis docker works
 - [ ] Redis local works
 - [ ] Cache in Redis
