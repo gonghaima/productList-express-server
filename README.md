@@ -22,6 +22,9 @@ TODO:
 - [ ] Pagination from there
 
 NOTES:
+run redis server first, in terminal, run
+```redis-server```
+
 list all redis keys
 redis-cli --scan --pattern '*'
 
