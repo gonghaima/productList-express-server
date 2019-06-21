@@ -17,8 +17,8 @@ TODO:
 - [x] Show version number
 - [ ] Fix the Dockerfile warning - absolute path
 - [x] Redis docker works
-- [ ] Redis local works
-- [ ] Cache in Redis
+- [x] Redis local works
+- [x] Cache in Redis
 - [ ] Pagination from there
 
 NOTES:
