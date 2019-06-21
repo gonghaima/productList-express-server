@@ -32,13 +32,13 @@ function JSONStringify(object) {
 }
 
 const findAll = async () => {
-  const cacheData = await redisClient.getAsync("product-cache-1");
+  const cacheData = await redisClient.getAsync("product-cache-3");
   if (cacheData) return { data: cacheData };
-  // const products = await axios.get(
-  //   "https://raw.githubusercontent.com/gonghaima/data/master/products.json"
-  // );
-  const products = { data: [3, 4, 5, 6, 7] };
-  await redisClient.setAsync("product-cache-1", JSON.stringify(products.data));
+  const products = await axios.get(
+    "https://raw.githubusercontent.com/gonghaima/data/master/products.json"
+  );
+  // const products = { data: [3, 4, 5, 6, 7] };
+  await redisClient.setAsync("product-cache-3", JSON.stringify(products.data));
   return products;
 };
 

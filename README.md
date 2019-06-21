@@ -20,3 +20,13 @@ TODO:
 - [ ] Redis local works
 - [ ] Cache in Redis
 - [ ] Pagination from there
+
+NOTES:
+list all redis keys
+redis-cli --scan --pattern '*'
+
+remove all keys in redis
+redis-cli FLUSHALL
+
+stop node cert warning locally
+export NODE_TLS_REJECT_UNAUTHORIZED=0
