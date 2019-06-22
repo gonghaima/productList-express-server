@@ -29,10 +29,10 @@ run redis server first, in terminal, run
 ```redis-server```
 
 list all redis keys
-redis-cli --scan --pattern '*'
+```redis-cli --scan --pattern '*'```
 
 remove all keys in redis
-redis-cli FLUSHALL
+```redis-cli FLUSHALL```
 
 stop node cert warning locally
-export NODE_TLS_REJECT_UNAUTHORIZED=0
+```export NODE_TLS_REJECT_UNAUTHORIZED=0```
