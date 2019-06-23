@@ -23,6 +23,7 @@ TODO:
   - request like "localhost:3500/api/products?offset=5&limit=5"
   - if offset not provided, it defaults to 0
   - response object will contain a list of the product data, has-next (boolean), has-previous (boolean), and total numbers of the products.
+- [ ] Unit test on business logic
 
 NOTES:
 run redis server first, in terminal, run
