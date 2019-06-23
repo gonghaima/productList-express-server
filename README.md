@@ -19,6 +19,7 @@ TODO:
 - [x] Redis docker works
 - [x] Redis local works
 - [x] Cache in Redis
+- [ ] Consolidate the resposne format
 - [ ] Pagination from there
   - request like "localhost:3500/api/products?offset=5&limit=5"
   - if offset not provided, it defaults to 0
