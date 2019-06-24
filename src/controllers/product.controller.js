@@ -6,7 +6,7 @@ const getAll = async (req, res, next) => {
   try {
     const products = await productModel.findAll();
     return res
-      .status(HTTPStatus.FOUND)
+      .status(HTTPStatus.OK)
       .json(generatePaginationData(products, false, false, products.length));
   } catch (e) {
     e.status = HTTPStatus.BAD_REQUEST;
@@ -21,7 +21,7 @@ const get = async (req, res, next) => {
   try {
     const products = await productModel.findAll();
     const paginatedProducts = filterProduct(products, offset, limit);
-    return res.status(HTTPStatus.FOUND).json(paginatedProducts);
+    return res.status(HTTPStatus.OK).json(paginatedProducts);
   } catch (error) {
     error.status = HTTPStatus.BAD_REQUEST;
     return next(error);
