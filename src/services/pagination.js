@@ -1,5 +1,5 @@
-const paginationObj = (products, hasNext, hasPrevious, total) => {
-  products, hasNext, hasPrevious, total;
+const generatePaginationData = (products, hasNext, hasPrevious, total) => {
+  return { products, hasNext, hasPrevious, total };
 };
 const filterProduct = (products, offsetData, limitData) => {
   const offset = +offsetData;
@@ -11,9 +11,13 @@ const filterProduct = (products, offsetData, limitData) => {
   const hasNext = products[offset * limit + limit + 1] ? true : false;
   const hasPrev = products[offset - 1] ? true : false;
   const lgth = products.length;
-  const filteredData = paginationObj(filteredProducts, hasNext, hasPrev, lgth);
-  debugger;
+  const filteredData = generatePaginationData(
+    filteredProducts,
+    hasNext,
+    hasPrev,
+    lgth
+  );
   return filteredData;
 };
 
-export { filterProduct };
+export { filterProduct, generatePaginationData };
