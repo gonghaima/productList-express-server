@@ -19,8 +19,8 @@ TODO:
 - [x] Redis docker works
 - [x] Redis local works
 - [x] Cache in Redis
-- [ ] Consolidate the resposne format
-- [ ] Pagination from there
+- [x] Consolidate the resposne format
+- [x] Pagination from there
   - request like "localhost:3500/api/products?offset=5&limit=5"
   - if offset not provided, it defaults to 0
   - response object will contain a list of the product data, has-next (boolean), has-previous (boolean), and total numbers of the products.
@@ -28,13 +28,13 @@ TODO:
 
 NOTES:
 run redis server first, in terminal, run
-```redis-server```
+`redis-server`
 
 list all redis keys
-```redis-cli --scan --pattern '*'```
+`redis-cli --scan --pattern '*'`
 
 remove all keys in redis
-```redis-cli FLUSHALL```
+`redis-cli FLUSHALL`
 
 stop node cert warning locally
-```export NODE_TLS_REJECT_UNAUTHORIZED=0```
+`export NODE_TLS_REJECT_UNAUTHORIZED=0`
