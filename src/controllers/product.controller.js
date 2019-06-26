@@ -1,7 +1,11 @@
 import HTTPStatus from "http-status";
 import productModel from "../models/product.model";
+import { config } from "../config";
 import { filterProduct, generatePaginationData } from "../services/pagination";
 
+const {
+  pagination: { defaultPage, itemsPerPage }
+} = config;
 const getAll = async (req, res, next) => {
   try {
     const products = await productModel.findAll();
@@ -16,7 +20,7 @@ const getAll = async (req, res, next) => {
 
 const get = async (req, res, next) => {
   const {
-    query: { offset = 0, limit = 5 }
+    query: { offset = defaultPage, limit = itemsPerPage }
   } = req;
   try {
     const products = await productModel.findAll();
