@@ -15,7 +15,7 @@ TODO:
 - [x] Using real api request, and relace mocks
 - [x] Production build fix & docker fix
 - [x] Show version number
-- [ ] Fix the Dockerfile warning - absolute path
+- [x] Fix the Dockerfile warning - absolute path
 - [x] Redis docker works
 - [x] Redis local works
 - [x] Cache in Redis
