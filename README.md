@@ -25,7 +25,10 @@ TODO:
   - if offset not provided, it defaults to 0
   - response object will contain a list of the product data, has-next (boolean), has-previous (boolean), and total numbers of the products.
 - [x] default value moved to config
-- [ ] Unit test on business logic
+- [ ] a branch without unit test
+- [ ] a branch with Jest
+- [ ] main branch with macha & chai
+- [ ] unit test on business logic
 
 NOTES:
 run redis server first, in terminal, run
