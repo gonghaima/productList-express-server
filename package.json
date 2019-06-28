@@ -7,6 +7,7 @@
     "start": "REDIS_URL=localhost:6379 && nodemon --exec babel-node src/index.js",
     "debug": "nodemon --exec babel-node src/index.js --inspect=0.0.0.0:3500",
     "build": "babel src --out-dir dist",
+    "test": "jest",
     "serve": "node dist/index.js"
   },
   "author": "Steven <gonghaima@hotmail.com>",
