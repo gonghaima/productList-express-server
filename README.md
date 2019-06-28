@@ -29,6 +29,7 @@ TODO:
 - [ ] a branch with Jest
   - add a dummy test to start with
   - add a coverage
+  - ignroe generated coverage files
 - [ ] main branch with macha & chai
 - [ ] unit test on business logic
 
