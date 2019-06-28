@@ -31,6 +31,7 @@ TODO:
   - add a coverage
   - ignroe generated coverage files
   - add test file pattern as spec
+  - unit on pagination service
 - [ ] main branch with macha & chai
 - [ ] unit test on business logic
 
