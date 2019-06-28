@@ -16,5 +16,12 @@ describe("pagination service", () => {
     expect(filteredData.products.length).toBe(9);
     expect(filteredData.products[0]).toBe("product54");
     expect(filteredData.total).toBe(90);
+
+    // should be able to work out hasNext and hasPrevious
+    const noPrevData = filterProduct(productsMock, 0, 9, 1111);
+    expect(noPrevData.hasPrevious).toBe(false);
+
+    const noNextData = filterProduct(productsMock, 80, 10, 1111);
+    expect(noNextData.hasNext).toBe(false);
   });
 });
