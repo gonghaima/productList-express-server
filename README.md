@@ -30,6 +30,7 @@ TODO:
   - add a dummy test to start with
   - add a coverage
   - ignroe generated coverage files
+  - add test file pattern as spec
 - [ ] main branch with macha & chai
 - [ ] unit test on business logic
 
