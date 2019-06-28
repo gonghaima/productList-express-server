@@ -28,6 +28,7 @@ TODO:
 - [x] a branch without unit test
 - [ ] a branch with Jest
   - add a dummy test to start with
+  - add a coverage
 - [ ] main branch with macha & chai
 - [ ] unit test on business logic
 
