@@ -13,12 +13,11 @@ jest.mock("../services/redis-client", () => ({
 }));
 
 describe("product model", () => {
-  it("should ok", async done => {
+  it("should ok", async () => {
     const modelData = await productModel.findAll({
       setAsync: () => Promise.resolve(true),
       getAsync: () => Promise.resolve(JSON.stringify(["product1", "product2"]))
     });
     expect(modelData).toEqual(["product1", "product2"]);
-    done();
   });
 });
