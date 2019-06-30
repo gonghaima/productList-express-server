@@ -1,7 +1,5 @@
 import productModel from "./product.model";
 import redis from "redis";
-// const { promisify } = require("util");
-import redisClient from "../services/redis-client";
 
 jest.mock("redis", () => ({
   createClient: () => Promise.resolve(true)
