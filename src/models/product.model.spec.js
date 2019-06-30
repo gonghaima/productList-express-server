@@ -1,8 +1,10 @@
 import productModel from "./product.model";
-import redis from "redis";
 
 jest.mock("redis", () => ({
   createClient: () => Promise.resolve(true)
+}));
+jest.mock("axios", () => ({
+  get: () => Promise.resolve({ data: ["product3", "product4"] })
 }));
 jest.mock("../services/redis-client", () => ({
   getAsync: () => {},
@@ -16,6 +18,8 @@ describe("product model", () => {
       setAsync: () => Promise.resolve(true),
       getAsync: () => Promise.resolve(JSON.stringify(["product1", "product2"]))
     });
-    expect(modelData).toEqual(["product1", "product2"]);
+
+    expect(modelData).toEqual(["product3", "product4"]);
+    expect(modelData.length).toEqual(2);
   });
 });
