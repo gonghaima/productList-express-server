@@ -1,5 +1,5 @@
 import axios from "axios";
-const redisClient = require("../services/redis-client");
+import redisClient from "../services/redis-client";
 
 const findAll = async () => {
   const cacheData = await redisClient.getAsync("product-cache");
