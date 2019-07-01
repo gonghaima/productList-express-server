@@ -9,6 +9,8 @@ const {
 const getAll = async (req, res, next) => {
   try {
     const products = await productModel.findAll();
+    console.log(JSON.stringify(products));
+
     return res
       .status(HTTPStatus.OK)
       .json(generatePaginationData(products, false, false, products.length));
