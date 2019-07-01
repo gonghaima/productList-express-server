@@ -13,9 +13,8 @@ jest.mock("../services/redis-client", () => ({
 }));
 
 describe("product model", () => {
-  it("should get product data successfully", async () => {
+  it("should get product data from axios if no data in redis", async () => {
     const modelData = await productModel.findAll();
-
     expect(modelData).toEqual(["product3", "product4"]);
     expect(modelData.length).toEqual(2);
   });
