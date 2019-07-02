@@ -16,11 +16,11 @@ describe("product.controller", () => {
       return res;
     };
     const mkReq = jest.fn();
-    // const mkRes = jest.fn();
+    const mkRes = jest.fn(mockResponse);
     const mkNext = jest.fn();
     const allProductData = await productController.getAll(
       mkReq,
-      mockResponse(),
+      mkRes(),
       mkNext
     );
     expect(allProductData.products).toEqual("test");
