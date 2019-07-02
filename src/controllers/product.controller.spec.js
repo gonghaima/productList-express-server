@@ -7,12 +7,21 @@ jest.mock("../models/product.model", () => ({
 
 describe("product.controller", () => {
   it("getAll function should return all data", async () => {
+    /** option 1 - pure mock */
+    // const mockResponse = () => {
+    //   const res = {};
+    //   res.status = () => res;
+    //   res.json = data => {
+    //     return { ...res, ...data };
+    //   };
+    //   return res;
+    // };
+
+    /** option 2 - jest fn - mock */
     const mockResponse = () => {
       const res = {};
-      res.status = () => res;
-      res.json = data => {
-        return { ...res, ...data };
-      };
+      res.status = jest.fn().mockReturnValue(res);
+      res.json = jest.fn(data => data);
       return res;
     };
     const mkReq = jest.fn();
