@@ -25,6 +25,7 @@ TODO:
   - if offset not provided, it defaults to 0
   - response object will contain a list of the product data, has-next (boolean), has-previous (boolean), and total numbers of the products.
 - [x] default value moved to config
+- [ ] deploy to a cloud server, so it is accessable via public uri
 - [x] a branch without unit test
 - [ ] a branch with Jest
   - add a dummy test to start with
