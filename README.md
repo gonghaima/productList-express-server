@@ -32,7 +32,7 @@ TODO:
   - ignroe generated coverage files
   - add test file pattern as spec
   - unit on pagination service
-- [ ] main branch with macha & chai
+- [ ] main branch with mocha & chai
 - [ ] unit test on business logic
 
 NOTES:
