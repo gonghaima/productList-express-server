@@ -54,7 +54,7 @@ describe("product.controller", () => {
     expect(allProductData.products[1].id).toEqual(1000);
   });
 
-  it("get function should return paginated data", async () => {
+  it("get function with specified offset and limit should return paginated data", async () => {
     const mockResponse = () => {
       const res = {};
       res.status = () => res;
@@ -75,5 +75,28 @@ describe("product.controller", () => {
       "evolve customized technologies"
     );
     expect(productData.products[0].id).toEqual(1000);
+  });
+
+  it("get function without specified offset and limit should return default data", async () => {
+    const mockResponse = () => {
+      const res = {};
+      res.status = () => res;
+      res.json = data => {
+        return { ...res, ...data };
+      };
+      return res;
+    };
+    const mockRequest = () => {
+      return { query: {} };
+    };
+    const mkReq = jest.fn(mockRequest);
+    const mkRes = jest.fn(mockResponse);
+    const mkNext = jest.fn();
+    const productData = await productController.get(mkReq(), mkRes(), mkNext);
+    expect(productData.products.length).toEqual(2);
+    expect(productData.products[0].description).toEqual(
+      "target seamless e-business"
+    );
+    expect(productData.products[0].id).toEqual(999);
   });
 });
