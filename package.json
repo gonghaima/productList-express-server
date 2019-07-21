@@ -4,12 +4,11 @@
   "main": "index.js",
   "repository": "git@github.com:gonghaima/productList-express-server.git",
   "scripts": {
-    "start": " nodemon --exec babel-node src/index.js",
     "local": "redis-server & REDIS_URL=localhost:6379 && nodemon --exec babel-node src/index.js",
     "debug": "nodemon --exec babel-node src/index.js --inspect=0.0.0.0:3500",
     "build": "babel src --out-dir dist",
     "test": "jest --coverage --testPathPattern=spec",
-    "serve": "node dist/index.js"
+    "start": "node dist/index.js"
   },
   "author": "Steven <gonghaima@hotmail.com>",
   "license": "MIT",
