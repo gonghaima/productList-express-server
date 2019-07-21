@@ -4,7 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:gonghaima/productList-express-server.git",
   "scripts": {
-    "start": "REDIS_URL=localhost:6379 && nodemon --exec babel-node src/index.js",
+    "start": " nodemon --exec babel-node src/index.js",
+    "local": "redis-server & REDIS_URL=localhost:6379 && nodemon --exec babel-node src/index.js",
     "debug": "nodemon --exec babel-node src/index.js --inspect=0.0.0.0:3500",
     "build": "babel src --out-dir dist",
     "test": "jest --coverage --testPathPattern=spec",
