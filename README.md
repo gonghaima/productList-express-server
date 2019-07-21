@@ -19,6 +19,7 @@ TODO:
 - [x] Redis docker works
 - [x] Redis local works
 - [x] Cache in Redis
+- [ ] Gracefully keep the app running, when redis is not available
 - [x] Consolidate the resposne format
 - [x] Pagination from there
   - request like "localhost:3500/api/products?offset=5&limit=5"
