@@ -1,10 +1,12 @@
 import express from "express";
+import cors from "cors";
 import fs from "fs";
 import path from "path";
 import process from "process";
 import apiRoutes from "./routes";
 
 const app = express();
+app.user(cors());
 app.use("/api", apiRoutes);
 
 // respond with "hello world" when a GET request is made to the homepage
